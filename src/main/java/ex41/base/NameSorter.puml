@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Class App {
+    String filePath
+
+}
+
+Class Validator {
+    validatePath(String filePath)
+}
+
+Class Reader {
+    readFile(file: file)
+    map<<firstName, lastName>>
+
+}
+
+Class Writer {
+    outputFile: file
+    write()
+
+}
+
+
+Class Sorter {
+    names: ArrayList
+
+    getNames()
+    sortNames()
+
+}
+
+App -- Reader
+App -- Writer
+App -- Sorter
+
+
+
+@enduml
