@@ -2,38 +2,32 @@
 'https://plantuml.com/sequence-diagram
 
 Class App {
-    String filePath
+    Path filepath
 
 }
 
 Class Validator {
-    validatePath(String filePath)
+    validatePath(Path filePath)
 }
 
 Class Reader {
-    readFile(file: file)
-    map<<firstName, lastName>>
-
+    namesFromFile(File inputFile) : List<List<String>>
 }
-
-Class Writer {
-    outputFile: file
-    write()
-
-}
-
 
 Class Sorter {
-    names: ArrayList
-
-    getNames()
-    sortNames()
-
+    sortNames(List<List<String>> unsortedNames) : List<List<String>>
 }
+Class Writer {
+    createOutputFile(List<List<String>> sortedNames)
+}
+
+
+
 
 App -- Reader
 App -- Writer
 App -- Sorter
+App -- Validator
 
 
 
