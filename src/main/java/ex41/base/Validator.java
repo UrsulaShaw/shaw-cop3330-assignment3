@@ -1,5 +1,10 @@
 package ex41.base;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Ursula Shaw
+ */
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
