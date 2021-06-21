@@ -1,0 +1,37 @@
+@startuml
+
+Class App {
+boolean makeJSFolder
+boolean makeCSSFolder
+String websiteName
+String author
+String webDir
+File webFile
+File htmlFile
+File jsFolder
+File cssFolder
+}
+
+Class CreateHTML {
+createHTML(String websiteName, String author) : String
+writeHTML(String htmlText, File webFile) : File htmlFile
+}
+
+Class GetUserInfo {
+getWebsiteName() : String websiteName
+getAuthor() : String authorName
+js() : boolean jsFolderYesOrNo
+css() : boolean cssFolderYesOrNo
+}
+
+Class MakeFolder {
+websiteFolder(String websiteName) : File webFile
+jsFolder(String websiteDirectory) : File jsFile
+cssFolder(String (String websiteDirectory) : File cssFile
+}
+
+App -- CreateHTML
+App -- MakeFolder
+App -- GetUserInfo
+
+@enduml

@@ -12,10 +12,6 @@ public class MakeFolder {
         String webDirectory = "./website/"+websiteName;
         return new File(webDirectory);
     }
-    public File htmlFolder(String websiteDirectory) {
-        String str = websiteDirectory + "/index.html";
-        return new File(str);
-    }
 
     public File jsFolder(String websiteDirectory) {
         String str = websiteDirectory + "/js/";
