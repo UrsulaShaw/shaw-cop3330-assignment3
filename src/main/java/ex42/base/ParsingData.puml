@@ -1,0 +1,18 @@
+@startuml
+
+Class App {
+    File inputFile
+}
+
+Class FileHandler {
+    readFile(File file) : List<List<String>>
+}
+
+Class Formatter {
+    format(List<List<String>> data)
+}
+
+App -- FileHandler
+App -- Formatter
+
+@enduml
